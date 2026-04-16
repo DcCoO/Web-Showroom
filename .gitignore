@@ -4,6 +4,7 @@
 #
 
 *.psd
+*.fbx
 
 .utmp/
 /[Ll]ibrary/
