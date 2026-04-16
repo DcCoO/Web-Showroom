@@ -180,7 +180,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 21
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -206,8 +206,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27123126}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19178952, y: 0, z: 0, w: 0.9814361}
-  m_LocalPosition: {x: 0, y: 1.19, z: -0.298}
+  m_LocalRotation: {x: 0.005556917, y: 0.9690959, z: -0.0032231498, w: 0.2466009}
+  m_LocalPosition: {x: -5.62, y: 1.12, z: 10.79}
   m_LocalScale: {x: 0.88635, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -525,6 +525,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Renderer: {fileID: 1056379791}
   BodyColorIndices: 00000000
+--- !u!1 &1207088074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1207088075}
+  m_Layer: 0
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1207088075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207088074}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!21 &1568884851
 Material:
   serializedVersion: 8
@@ -969,6 +1000,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mixingCamera: {fileID: 2140618813}
+  _target: {fileID: 1207088075}
+  _externalCamera: {fileID: 1629939256}
+  _horizontalAngle: 0
+  _verticalAngle: 5
+  _minVerticalAngle: 5
+  _maxVerticalAngle: 45
+  _distance: 10
+  _minDistance: 2
+  _maxDistance: 20
+  _horizontalSensitivity: 3
+  _verticalSensitivity: 3
+  _zoomSensitivity: 5
+  _smoothness: 5
 --- !u!1 &2140618812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,8 +1065,8 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
-  Weight0: 0
-  Weight1: 1
+  Weight0: 1
+  Weight1: 0
   Weight2: 0
   Weight3: 0
   Weight4: 0
@@ -1056,3 +1100,4 @@ SceneRoots:
   - {fileID: 49411866}
   - {fileID: 559486645}
   - {fileID: 2140618814}
+  - {fileID: 1207088075}
