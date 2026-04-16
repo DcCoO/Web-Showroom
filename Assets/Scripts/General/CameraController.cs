@@ -16,11 +16,25 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float _minDistance = 2f;
     [SerializeField] private float _maxDistance = 20f;
 
+    [SerializeField] private float _horizontalSensitivity = 3f;
+    [SerializeField] private float _verticalSensitivity = 3f;
+    [SerializeField] private float _zoomSensitivity = 5f;
     [SerializeField] private float _smoothness = 5f;
 
     private float _currentHorizontalAngle;
     private float _currentVerticalAngle;
     private float _currentDistance;
+
+    private void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            _horizontalAngle += Input.GetAxis("Mouse X") * _horizontalSensitivity;
+            _verticalAngle -= Input.GetAxis("Mouse Y") * _verticalSensitivity;
+        }
+
+        _distance -= Input.GetAxis("Mouse ScrollWheel") * _zoomSensitivity;
+    }
 
     private void LateUpdate()
     {
